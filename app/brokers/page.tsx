@@ -1,6 +1,4 @@
-import Link from 'next/link';
-
-import { Cards, FinalCTA, Layout, PageHero, SectionHeader } from '@/components/marketing';
+import { FinalCTA, Layout, PageHero, SectionHeader } from '@/components/marketing';
 
 export default function Page() {
   return (
@@ -13,78 +11,109 @@ export default function Page() {
 
       <section className="section">
         <div className="container">
-          <SectionHeader title="Your best brokers should be selling, not babysitting email." />
-          <Cards
-            items={[
-              {
-                title: 'RFQs pile up',
-                copy: 'Rate requests come in fast and get buried under thread noise before brokers can respond.',
-              },
-              {
-                title: 'Paperwork slows billing',
-                copy: 'Missing PODs and unsigned rate cons hold up invoicing and delay cash flow.',
-              },
-              {
-                title: 'Updates interrupt selling time',
-                copy: 'Manual status replies and customer check-ins pull brokers away from quoting and coverage.',
-              },
-            ]}
-          />
+          <SectionHeader title="Your best brokers are buried in email." />
+          <div className="grid3">
+            <article className="card">
+              <h3>RFQs pile up</h3>
+              <p className="muted">
+                Rate requests come in fast and get buried under thread noise before brokers can respond.
+              </p>
+            </article>
+            <article className="card">
+              <h3>Paperwork slows billing</h3>
+              <p className="muted">
+                Missing PODs and unsigned rate cons hold up invoicing and delay cash flow.
+              </p>
+            </article>
+            <article className="card">
+              <h3>Updates interrupt selling time</h3>
+              <p className="muted">
+                Manual status replies and customer check-ins pull brokers away from quoting and coverage.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section className="section light">
         <div className="container">
-          <SectionHeader title="What Clyde handles for brokers" />
-          <Cards
-            items={[
-              {
-                title: 'RFQ triage',
-                copy: 'Prioritize and route incoming rate requests so brokers respond faster.',
-              },
-              {
-                title: 'Status updates',
-                copy: 'Draft and file customer status replies from load and tracking context.',
-              },
-              {
-                title: 'POD and paperwork',
-                copy: 'Detect, extract, and file PODs, BOLs, and rate confirmations automatically.',
-              },
-              {
-                title: 'Missing document chase',
-                copy: "Follow up on outstanding paperwork so billing doesn't stall.",
-              },
-              {
-                title: 'Load award intake',
-                copy: 'Extract new load details from award emails and prepare them for the TMS.',
-              },
-              {
-                title: 'Customer response tracking',
-                copy: 'Track open customer threads and flag what needs a reply.',
-              },
-            ]}
-          />
+          <SectionHeader title="What a Clyde-powered broker day looks like" />
+          <div className="beforeAfterGrid">
+            <article className="beforeCard">
+              <p className="beforeAfterLabel beforeLabel">Before Clyde</p>
+              <ul className="beforeAfterList">
+                <li>Manual POD chase</li>
+                <li>RFQs buried in threads</li>
+                <li>Status emails typed by hand</li>
+              </ul>
+            </article>
+            <article className="afterCard">
+              <p className="beforeAfterLabel afterLabel">After Clyde</p>
+              <ul className="beforeAfterList">
+                <li>PODs auto-matched and filed</li>
+                <li>RFQs triaged and prioritized instantly</li>
+                <li>Draft status replies generated with load context</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <SectionHeader
-            title="More time selling. Less time refreshing the inbox."
-            copy="Clyde handles repetitive freight inbox work so brokers can focus on relationships, coverage, quoting, and growing their book."
-          />
-          <div className="card">
-            <p>Rate requests handled · Replies ready for review · Missing PODs chased · Load awards processed</p>
-            <p className="muted">
-              <Link href="/">Book a broker demo</Link>
+          <SectionHeader title="Clyde in action — a real broker scenario" />
+          <div className="card scenarioTimeline">
+            {[
+              {
+                title: 'Email arrives',
+                copy: 'Rate con from carrier lands in the shared inbox.',
+              },
+              {
+                title: 'Clyde reads and identifies',
+                copy: 'Clyde reads the attachment and identifies the load details.',
+              },
+              {
+                title: 'Load matched',
+                copy: 'Matches to HFB-3429 in active loads.',
+              },
+              {
+                title: 'Drafts generated',
+                copy: 'Generates signed rate con + draft confirmation to carrier.',
+              },
+              {
+                title: 'Broker approval',
+                copy: 'Broker approves in one click.',
+              },
+            ].map((item, index) => (
+              <div key={item.title} className="scenarioStep">
+                <div className="scenarioNum">{index + 1}</div>
+                <p className="scenarioText">
+                  <strong>{item.title}</strong>
+                  {item.copy}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section light">
+        <div className="container">
+          <div className="wideTestimonial">
+            <p className="lead noMargin">
+              “Clyde gave our brokers hours back every week. RFQs are prioritized immediately, paperwork no longer
+              stalls billing, and our team can stay focused on covering freight.”
+            </p>
+            <p className="noMargin muted">
+              <strong>Marcus Chen</strong> · VP of Operations, Northline Logistics
             </p>
           </div>
         </div>
       </section>
 
       <FinalCTA
-        title="Give brokers their selling time back."
-        copy="See how Clyde removes inbox drag from broker operations."
+        title="Give your brokers their selling time back."
+        copy="Book a walkthrough to see how Clyde handles the inbox work so your team can focus on covering loads."
       />
     </Layout>
   );
