@@ -41,8 +41,8 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(10px);
 }
 .mainNav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 18px; }
-.brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: .22em; color: #e6efff; }
-.dogMark { letter-spacing: 0; font-size: 1.1rem; }
+.brand { display: inline-flex; align-items: center; }
+.logoImg { height: 32px; width: auto; display: block; }
 .navLinks { display: flex; gap: 18px; color: #dce8ff; font-size: .95rem; }
 .navCtas { display: flex; align-items: center; gap: 14px; }
 .subtleLink { color: #dce8ff; }
