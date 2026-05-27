@@ -40,20 +40,36 @@ export function MarketingHeader() {
 export function MarketingFooter() {
   return (
     <footer className="footer">
-      <div className="container footerGrid">
-        <div className="stack-sm">
-          <div className="brand">
-            <img src="/images/logo-white.png" alt="Clyde" className="logoImg" />
-          </div>
-          <p className="muted-light">Less inbox. More freight.</p>
-          <p className="small muted-light">Built by logistics teams, for logistics teams.</p>
+      <div className="container footerInner">
+        <div className="footerBrand">
+          <img src="/images/logo-white.png" alt="Clyde" className="logoImg" />
+          <p className="footerTagline">Less inbox. More freight.</p>
+          <p className="footerSub">Built by logistics teams, for logistics teams.</p>
         </div>
-        <div className="footerLinks">
-          {[...nav, ["Demo", "/demo"], ["Login", "/login"]].map(([label, href]) => (
-            <Link key={href} href={href}>
-              {label}
-            </Link>
-          ))}
+        <div className="footerCols">
+          <div className="footerCol">
+            <p className="footerColHead">Product</p>
+            <Link href="/product">Product</Link>
+            <Link href="/integrations">Integrations</Link>
+            <Link href="/pricing">Pricing</Link>
+            <Link href="/trust">Security</Link>
+          </div>
+          <div className="footerCol">
+            <p className="footerColHead">Audiences</p>
+            <Link href="/brokers">Brokers</Link>
+            <Link href="/three-pls">3PLs</Link>
+            <Link href="/carriers">Carriers</Link>
+          </div>
+          <div className="footerCol">
+            <p className="footerColHead">Company</p>
+            <Link href="/demo">Book a demo</Link>
+            <Link href="/login">Log in</Link>
+          </div>
+        </div>
+      </div>
+      <div className="footerBottom">
+        <div className="container">
+          <p>© 2025 Clyde. All rights reserved.</p>
         </div>
       </div>
     </footer>
