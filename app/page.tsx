@@ -291,6 +291,51 @@ export default function Home() {
         </div>
       </section>
 
+
+
+      <section className="section">
+        <div className="container">
+          <SectionHeader title="Freight teams that gave their inbox back." />
+          <div className="testimonialGrid">
+            <article className="testimonialCard">
+              <span className="testimonialMark" aria-hidden="true">“</span>
+              <p className="testimonialQuote">We used to have one person whose whole job was chasing PODs and forwarding emails. Clyde handles 80% of that in the background now.</p>
+              <div className="testimonialAuthor">
+                <div className="testimonialAvatar" aria-hidden="true">MC</div>
+                <div>
+                  <p className="testimonialName">Marcus Chen</p>
+                  <p className="testimonialRole">Operations Manager, Summit Freight</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="testimonialCard">
+              <span className="testimonialMark" aria-hidden="true">“</span>
+              <p className="testimonialQuote">Our team responds to load offers 3x faster. Clyde surfaces the right context every time without us having to dig.</p>
+              <div className="testimonialAuthor">
+                <div className="testimonialAvatar" aria-hidden="true">TR</div>
+                <div>
+                  <p className="testimonialName">Tanya Rivera</p>
+                  <p className="testimonialRole">Senior Broker, Northline Logistics</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="testimonialCard">
+              <span className="testimonialMark" aria-hidden="true">“</span>
+              <p className="testimonialQuote">Rate cons used to sit in our inbox for hours. Now they&apos;re matched, signed, and filed before the broker even checks their email.</p>
+              <div className="testimonialAuthor">
+                <div className="testimonialAvatar" aria-hidden="true">DW</div>
+                <div>
+                  <p className="testimonialName">Derek Walsh</p>
+                  <p className="testimonialRole">VP Operations, Voyager Logistics</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <FinalCTA
         title="Give your team their inbox back."
         copy="See how Clyde turns freight email, paperwork, and load actions into a calmer operating system for brokers and 3PLs."
