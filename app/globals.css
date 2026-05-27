@@ -51,11 +51,17 @@ a { color: inherit; text-decoration: none; }
 .btnPrimary { background: var(--blue-500); color: white; }
 .btnSecondary { color: #dbe8ff; border-color: rgba(165, 191, 236, .45); background: rgba(255, 255, 255, .04); }
 
+/* Drop a truck photo: set --hero-bg-image: url('/images/hero-truck.jpg') on :root when image is ready */
 .hero {
   position: relative;
   color: #f4f8ff;
   background: linear-gradient(140deg, var(--navy-950), var(--navy-900) 45%, var(--navy-800));
   overflow: hidden;
+  min-height: 92vh;
+  background-image: var(--hero-bg-image, none);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
 }
 .hero::before {
   content: ""; position: absolute; inset: 0;
@@ -120,4 +126,105 @@ a { color: inherit; text-decoration: none; }
   .navLinks { width: 100%; order: 3; overflow-x: auto; padding-bottom: 2px; }
   .section { padding: 68px 0; }
   .uiMock { grid-template-columns: 1fr; }
+}
+
+
+.heroCards { display: grid; gap: 14px; }
+
+.heroCard {
+  border: 1px solid rgba(170, 194, 237, .38);
+  background: rgba(6, 18, 40, .72);
+  border-radius: 14px;
+  padding: 14px 16px;
+  backdrop-filter: blur(10px);
+  color: #eaf2ff;
+  display: grid;
+  gap: 8px;
+}
+
+.heroCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .92rem;
+}
+
+.heroCardIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.heroCardIconBlue { background: rgba(59, 130, 246, .25); }
+.heroCardIconGreen { background: rgba(74, 222, 128, .18); }
+.heroCardIconPurple { background: rgba(167, 139, 250, .2); }
+
+.heroCardMeta { display: grid; gap: 1px; flex: 1; }
+.heroCardTime { font-size: .78rem; color: #7a9ac4; }
+.heroCardLink { margin-left: auto; font-size: .82rem; color: #93bbff; }
+.heroCardBody { margin: 0; font-size: .88rem; color: #ccddf5; line-height: 1.5; }
+.heroCardSender { margin: 0; font-size: .8rem; color: #7a9ac4; }
+.heroCardRoute { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.heroCardLabel { font-size: .78rem; color: #7a9ac4; display: block; }
+
+.heroCardTable {
+  display: flex;
+  gap: 16px;
+  font-size: .88rem;
+  align-items: flex-end;
+}
+.heroCardMatch { color: #60a5fa; font-weight: 600; font-size: .88rem; }
+
+.heroCardTags { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.heroTag {
+  font-size: .75rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(150, 180, 230, .35);
+  color: #b0c8ef;
+}
+.heroTagHighlight { background: rgba(63, 123, 255, .22); border-color: rgba(99,150,255,.45); color: #aac5ff; }
+.heroTagReady { background: rgba(52, 211, 153, .15); border-color: rgba(52,211,153,.35); color: #6ee7b7; }
+
+.heroAccent { color: #7eb3ff; }
+.heroPlayBtn { display: inline-flex; gap: 8px; align-items: center; }
+
+.proofBar {
+  background: #f6f9fc;
+  border-bottom: 1px solid #dbe4f1;
+  padding: 28px 0;
+  text-align: center;
+}
+.proofLabel {
+  margin: 0 0 18px;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #8aa0be;
+}
+.proofLogos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.proofLogo {
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: #8aa0be;
+  text-transform: uppercase;
+}
+.proofLogo em {
+  display: block;
+  font-style: normal;
+  font-size: .66rem;
+  letter-spacing: .18em;
+  font-weight: 400;
+  margin-top: 1px;
+  color: #aab9cf;
 }
