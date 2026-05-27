@@ -318,6 +318,17 @@ a { color: inherit; text-decoration: none; }
   padding: 28px 0;
   text-align: center;
 }
+
+.faqSection { margin-top:48px; }
+.faqSectionHead { font-size:1.3rem; font-weight:700; margin:0 0 24px; }
+.faqList { display:grid; gap:0; border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+.faqItem { border-bottom:1px solid var(--line); }
+.faqItem:last-child { border-bottom:none; }
+.faqQuestion { width:100%; text-align:left; padding:18px 22px; font-size:.95rem; font-weight:600; background:white; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.faqQuestion:hover { background:var(--surface); }
+.faqIcon { font-size:1.2rem; color:var(--ink-700); flex-shrink:0; transition:transform .2s; }
+.faqIcon.open { transform:rotate(45deg); }
+.faqAnswer { padding:0 22px 18px; font-size:.9rem; color:var(--ink-700); line-height:1.7; margin:0; }
 .proofLabel {
   margin: 0 0 18px;
   font-size: .78rem;
