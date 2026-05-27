@@ -322,3 +322,59 @@ a { color: inherit; text-decoration: none; }
   margin-left: 12px;
   font-weight: 400;
 }
+
+.demoGrid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: start;
+}
+.demoForm {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+  background: white;
+}
+.demoField { display: grid; gap: 6px; }
+.demoLabel { font-size: .85rem; font-weight: 600; color: var(--ink-900); }
+.demoInput {
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: .95rem;
+  font-family: inherit;
+  color: var(--ink-900);
+  background: white;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.demoInput:focus {
+  outline: none;
+  border-color: #3e7bff;
+  box-shadow: 0 0 0 3px rgba(62, 123, 255, 0.1);
+}
+.demoSidebar {
+  display: grid;
+  gap: 16px;
+}
+.demoSideCard {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  background: white;
+}
+.demoSideCard h3 { margin: 0 0 16px; font-size: 1.05rem; }
+.demoSideCard ul { margin: 0; padding: 0 0 0 18px; display: grid; gap: 8px; }
+.demoSideCard li { font-size: .92rem; color: var(--ink-700); }
+.demoDivider { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
+.demoNote { margin: 0; font-size: .85rem; color: var(--ink-700); }
+.demoSubmitBtn { width: 100%; justify-content: center; padding: 14px; font-size: 1rem; }
+.demoSuccess { border: 1px solid var(--line); border-radius: 18px; padding: 40px 32px; background: white; text-align: center; display: grid; gap: 12px; }
+.demoSuccess h3 { margin: 0; }
+
+@media (max-width: 900px) {
+  .demoGrid { grid-template-columns: 1fr; }
+}
