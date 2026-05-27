@@ -16,34 +16,100 @@ export default function Home() {
               Clyde automates freight email, paperwork, and load actions so brokers and 3PLs can spend less time
               checking email and more time moving freight.
             </p>
-            <p className="lead noMargin">Built by logistics teams, for logistics teams.</p>
+            <p className="lead noMargin">
+              Built by <span className="heroAccent">logistics teams,</span> for <span className="heroAccent">logistics teams.</span>
+            </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link href="/demo" className="btn btnPrimary">
                 Book a demo
               </Link>
-              <Link href="/product" className="btn btnSecondary">
+              <Link href="/product" className="btn btnSecondary heroPlayBtn">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
+                  <circle cx="9" cy="9" r="8" stroke="currentColor" strokeWidth="1.4" />
+                  <path d="M7.5 6.5l4 2.5-4 2.5V6.5z" fill="currentColor" />
+                </svg>
                 See how it works
               </Link>
             </div>
           </div>
-          <div className="stack">
-            <div className="darkCard">
-              <strong>POD received</strong>
-              <p>POD attached for load HFB-3429</p>
-              <span>Inbox · Needs Review</span>
+          <div className="heroCards">
+            {/* Card 1: POD received */}
+            <div className="heroCard">
+              <div className="heroCardHeader">
+                <div className="heroCardIcon heroCardIconBlue">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <rect x="1" y="3" width="14" height="10" rx="2" stroke="#93c5fd" strokeWidth="1.5" />
+                    <path d="M1 6l7 4 7-4" stroke="#93c5fd" strokeWidth="1.5" />
+                  </svg>
+                </div>
+                <div className="heroCardMeta">
+                  <strong>POD received</strong>
+                  <span className="heroCardTime">6m ago</span>
+                </div>
+              </div>
+              <p className="heroCardBody">POD attached for load HFB-3429</p>
+              <p className="heroCardSender">danielle@harborfreight.demo</p>
+              <div className="heroCardTags">
+                <span className="heroTag">Inbox</span>
+                <span className="heroTag heroTagHighlight">Needs Review</span>
+              </div>
             </div>
-            <div className="darkCard">
-              <strong>Load matched — HFB-3429</strong>
-              <p>Seattle, WA → Denver, CO</p>
-              <span>92% match</span>
+
+            {/* Card 2: Load matched */}
+            <div className="heroCard">
+              <div className="heroCardHeader">
+                <div className="heroCardIcon heroCardIconGreen">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="6" stroke="#4ade80" strokeWidth="1.5" />
+                    <path d="M5 8l2 2 4-4" stroke="#4ade80" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <strong>Load matched — HFB-3429</strong>
+                <span className="heroCardLink">View load →</span>
+              </div>
+              <p className="heroCardRoute">Seattle, WA → Denver, CO</p>
+              <div className="heroCardTable">
+                <div><span className="heroCardLabel">Carrier</span><span>Redline Express</span></div>
+                <div><span className="heroCardLabel">ETA</span><span>May 31</span></div>
+                <div><span className="heroCardMatch">92% match</span></div>
+              </div>
             </div>
-            <div className="darkCard">
-              <strong>Draft reply generated</strong>
-              <p>Ready to review</p>
+
+            {/* Card 3: Draft reply */}
+            <div className="heroCard">
+              <div className="heroCardHeader">
+                <div className="heroCardIcon heroCardIconPurple">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2l1.5 3h3l-2.5 2 1 3L8 8.5 5 10l1-3L3.5 5h3z" stroke="#a78bfa" strokeWidth="1.2" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <strong>Draft reply generated</strong>
+                <span className="heroTag heroTagReady">Ready to review</span>
+              </div>
+              <p className="heroCardSender">To: Danielle Torres</p>
+              <p className="heroCardBody">Rate con received. Signed and attached — HFB-3429_ratecon_signed.pdf. Driver assigned: Tony Wu, cell 206-555-0317.</p>
+              <div className="heroCardTags">
+                <span style={{ fontSize: ".78rem", color: "#94afd4" }}>Classified as:</span>
+                <span className="heroTag">Inbox</span>
+                <span className="heroTag heroTagHighlight">Needs Review</span>
+              </div>
             </div>
           </div>
         </div>
       </CinematicHero>
+
+      <div className="proofBar">
+        <div className="container">
+          <p className="proofLabel">Trusted by freight teams of all sizes</p>
+          <div className="proofLogos">
+            <span className="proofLogo">VOYAGER <em>LOGISTICS</em></span>
+            <span className="proofLogo">BLUEWATER <em>LOGISTICS</em></span>
+            <span className="proofLogo">SUMMIT <em>FREIGHT</em></span>
+            <span className="proofLogo">NORTHLINE <em>LOGISTICS</em></span>
+            <span className="proofLogo">ELEVATE <em>LOGISTICS</em></span>
+          </div>
+        </div>
+      </div>
 
       <section className="section">
         <div className="container">
