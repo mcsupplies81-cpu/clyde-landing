@@ -29,7 +29,7 @@ export function MarketingHeader() {
             Log in
           </Link>
           <Link href="/demo" className="btn btnPrimary">
-            Book a demo
+            Book a demo →
           </Link>
         </div>
       </nav>
