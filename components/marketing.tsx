@@ -15,8 +15,7 @@ export function MarketingHeader() {
     <header className="mainNavWrap">
       <nav className="container mainNav" aria-label="Primary">
         <Link href="/" className="brand">
-          <span className="dogMark">◖◗</span>
-          <span>CLYDE</span>
+          <img src="/images/logo-white.png" alt="Clyde" className="logoImg" />
         </Link>
         <div className="navLinks">
           {nav.map(([label, href]) => (
@@ -44,8 +43,7 @@ export function MarketingFooter() {
       <div className="container footerGrid">
         <div className="stack-sm">
           <div className="brand">
-            <span className="dogMark">◖◗</span>
-            <span>CLYDE</span>
+            <img src="/images/logo-white.png" alt="Clyde" className="logoImg" />
           </div>
           <p className="muted-light">Less inbox. More freight.</p>
           <p className="small muted-light">Built by logistics teams, for logistics teams.</p>
