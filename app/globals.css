@@ -36,13 +36,18 @@ a { color: inherit; text-decoration: none; }
 
 .mainNavWrap {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(5, 11, 25, 0.78);
-  border-bottom: 1px solid rgba(158, 180, 220, 0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(5, 11, 25, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .mainNav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 18px; }
 .brand { display: inline-flex; align-items: center; }
-.logoImg { height: 28px; width: auto; display: block; filter: brightness(0) invert(1); }
+.logoImg {
+  height: 26px;
+  width: auto;
+  display: block;
+}
 .navLinks { display: flex; gap: 18px; color: #dce8ff; font-size: .95rem; }
 .navCtas { display: flex; align-items: center; gap: 14px; }
 .subtleLink { color: #dce8ff; }
@@ -55,7 +60,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   color: #f4f8ff;
   overflow: hidden;
-  min-height: 94vh;
+  min-height: 82vh;
   background:
     linear-gradient(105deg,
       rgba(4, 9, 20, 0.72) 0%,
@@ -82,8 +87,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
   gap: 30px;
-  padding: 140px 0 110px;
-  align-items: center;
+  padding: 100px 0 90px;
+  align-items: start;
 }
 .pageHeroInner { padding-bottom: 78px; }
 
@@ -138,7 +143,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-.heroCards { display: grid; gap: 10px; }
+.heroCards {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+}
 
 .heroCard {
   border: 1px solid rgba(170, 194, 237, .38);
@@ -201,14 +212,14 @@ a { color: inherit; text-decoration: none; }
 .heroAccent { color: #7eb3ff; }
 .headlineDot {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #3e7bff;
-  margin-left: 6px;
-  vertical-align: middle;
+  margin-left: 4px;
+  vertical-align: super;
   position: relative;
-  top: -8px;
+  top: 4px;
 }
 .heroPlayBtn { display: inline-flex; gap: 8px; align-items: center; }
 
