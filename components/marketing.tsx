@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 const nav = [
   ["Product", "/product"],
@@ -11,20 +13,33 @@ const nav = [
 ] as const;
 
 export function MarketingHeader() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <header className="mainNavWrap">
       <nav className="container mainNav" aria-label="Primary">
         <Link href="/" className="brand">
           <img src="/images/logo-white.png" alt="Clyde" className="logoImg" />
         </Link>
-        <div className="navLinks">
+        <button
+          type="button"
+          className="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isNavOpen}
+          onClick={() => setIsNavOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div className={`navLinks ${isNavOpen ? "navOpen" : ""}`.trim()}>
           {nav.map(([label, href]) => (
             <Link key={href} href={href}>
               {label}
             </Link>
           ))}
         </div>
-        <div className="navCtas">
+        <div className={`navCtas ${isNavOpen ? "navOpen" : ""}`.trim()}>
           <Link href="/login" className="subtleLink">
             Log in
           </Link>
