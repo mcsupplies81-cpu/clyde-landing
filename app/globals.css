@@ -375,6 +375,60 @@ a { color: inherit; text-decoration: none; }
 .demoSuccess { border: 1px solid var(--line); border-radius: 18px; padding: 40px 32px; background: white; text-align: center; display: grid; gap: 12px; }
 .demoSuccess h3 { margin: 0; }
 
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.pricingCard {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px 28px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+.pricingCardHighlight {
+  border-color: #3e7bff;
+  box-shadow: 0 0 0 1px #3e7bff, 0 8px 40px rgba(62, 123, 255, 0.12);
+}
+.pricingBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3e7bff;
+  color: white;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 99px;
+}
+.pricingTop { display: grid; gap: 10px; }
+.pricingName { margin: 0; font-size: 1.05rem; font-weight: 700; }
+.pricingPrice { display: flex; align-items: baseline; gap: 2px; }
+.pricingAmount { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+.pricingPeriod { font-size: .9rem; color: var(--ink-700); }
+.pricingDesc { margin: 0; font-size: .9rem; color: var(--ink-700); line-height: 1.5; }
+.pricingFeatures { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; flex: 1; }
+.pricingFeatures li { display: flex; align-items: center; gap: 8px; font-size: .9rem; }
+.pricingCta { width: 100%; justify-content: center; margin-top: auto; }
+.btnOutline { border: 1px solid var(--line); color: var(--ink-900); background: white; }
+.btnOutline:hover { border-color: #3e7bff; color: #3e7bff; }
+.pricingPilot {
+  margin-top: 32px;
+  text-align: center;
+  font-size: .9rem;
+  color: var(--ink-700);
+}
+.pricingPilot a { color: #3e7bff; }
+
 @media (max-width: 900px) {
   .demoGrid { grid-template-columns: 1fr; }
+  .pricingGrid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 }
