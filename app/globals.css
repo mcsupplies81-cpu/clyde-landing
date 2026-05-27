@@ -42,7 +42,7 @@ a { color: inherit; text-decoration: none; }
 }
 .mainNav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 18px; }
 .brand { display: inline-flex; align-items: center; }
-.logoImg { height: 32px; width: auto; display: block; }
+.logoImg { height: 28px; width: auto; display: block; filter: brightness(0) invert(1); }
 .navLinks { display: flex; gap: 18px; color: #dce8ff; font-size: .95rem; }
 .navCtas { display: flex; align-items: center; gap: 14px; }
 .subtleLink { color: #dce8ff; }
@@ -58,18 +58,18 @@ a { color: inherit; text-decoration: none; }
   min-height: 94vh;
   background:
     linear-gradient(105deg,
-      rgba(4, 9, 20, 0.82) 0%,
-      rgba(4, 9, 20, 0.65) 38%,
-      rgba(4, 9, 20, 0.18) 62%,
-      rgba(4, 9, 20, 0.10) 100%
+      rgba(4, 9, 20, 0.72) 0%,
+      rgba(4, 9, 20, 0.50) 35%,
+      rgba(4, 9, 20, 0.08) 58%,
+      rgba(4, 9, 20, 0.04) 100%
     ),
     linear-gradient(to bottom,
-      rgba(4, 9, 20, 0.60) 0%,
-      rgba(4, 9, 20, 0.00) 25%,
-      rgba(4, 9, 20, 0.00) 70%,
-      rgba(4, 9, 20, 0.70) 100%
+      rgba(4, 9, 20, 0.50) 0%,
+      rgba(4, 9, 20, 0.00) 20%,
+      rgba(4, 9, 20, 0.00) 65%,
+      rgba(4, 9, 20, 0.55) 100%
     ),
-    url('/images/hero-truck.jpg') center 50% / cover no-repeat,
+    url('/images/hero-truck.jpg') center 45% / cover no-repeat,
     #050b19;
 }
 .hero::before {
@@ -199,7 +199,17 @@ a { color: inherit; text-decoration: none; }
 .heroTagReady { background: rgba(52, 211, 153, .15); border-color: rgba(52,211,153,.35); color: #6ee7b7; }
 
 .heroAccent { color: #7eb3ff; }
-.headlineDot { color: #3e7bff; }
+.headlineDot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3e7bff;
+  margin-left: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -8px;
+}
 .heroPlayBtn { display: inline-flex; gap: 8px; align-items: center; }
 
 .proofBar {
