@@ -8,9 +8,9 @@ export default function Home() {
         <div className="container heroInner">
           <div className="stack">
             <h1 className="h1 noMargin">
-              Less inbox.
+              Less inbox<span className="headlineDot">.</span>
               <br />
-              More freight.
+              More freight<span className="headlineDot">.</span>
             </h1>
             <p className="lead noMargin max68">
               Clyde automates freight email, paperwork, and load actions so brokers and 3PLs can spend less time
@@ -21,7 +21,7 @@ export default function Home() {
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link href="/demo" className="btn btnPrimary">
-                Book a demo
+                Book a demo &nbsp;→
               </Link>
               <Link href="/product" className="btn btnSecondary heroPlayBtn">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
