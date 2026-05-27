@@ -136,17 +136,20 @@ export default function Home() {
       <section className="section light">
         <div className="container">
           <SectionHeader title="From freight email to completed load action." />
-          <Cards
-            items={[
-              { title: "Read", copy: "Clyde reads incoming freight emails, attachments, and threads." },
-              { title: "Match", copy: "Clyde matches messages to loads, documents, customers, carriers, and lanes." },
-              { title: "Act", copy: "Clyde drafts replies, files paperwork, and prepares the next step." },
-              {
-                title: "Sync",
-                copy: "Your team reviews and Clyde syncs approved actions into existing workflows. Clyde is the layer above your TMS, not a replacement.",
-              },
-            ]}
-          />
+          <div className="stepsGrid">
+            {[
+              { step: "01", title: "Read", copy: "Clyde reads incoming freight emails, attachments, and threads." },
+              { step: "02", title: "Match", copy: "Clyde matches messages to loads, documents, customers, carriers, and lanes." },
+              { step: "03", title: "Act", copy: "Clyde drafts replies, files paperwork, and prepares the next step." },
+              { step: "04", title: "Sync", copy: "Your team reviews and Clyde syncs approved actions into existing workflows." },
+            ].map((item) => (
+              <div key={item.step} className="stepCard">
+                <span className="stepNumber">{item.step}</span>
+                <h3>{item.title}</h3>
+                <p className="muted">{item.copy}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -184,7 +187,14 @@ export default function Home() {
             title="Works with the systems you already use."
             copy="Clyde connects your inbox, load data, documents, tracking updates, and existing workflows without replacing your TMS."
           />
-          <div className="flowBand">Inbox → Load data → Documents → Tracking → TMS</div>
+          <div className="flowBand">
+            {["Inbox", "Load data", "Documents", "Tracking", "TMS"].map((item, i, arr) => (
+              <div key={item} className="flowStep">
+                {item}
+                {i < arr.length - 1 && <span className="flowArrow">→</span>}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
