@@ -102,11 +102,38 @@ export default function Home() {
         <div className="container">
           <p className="proofLabel">Trusted by freight teams of all sizes</p>
           <div className="proofLogos">
-            <span className="proofLogo">VOYAGER <em>LOGISTICS</em></span>
-            <span className="proofLogo">BLUEWATER <em>LOGISTICS</em></span>
-            <span className="proofLogo">SUMMIT <em>FREIGHT</em></span>
-            <span className="proofLogo">NORTHLINE <em>LOGISTICS</em></span>
-            <span className="proofLogo">ELEVATE <em>LOGISTICS</em></span>
+            <span className="proofLogo">
+              <svg className="proofLogoIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 11.5h12L11 7.5H7.5L6 5.5H4.5L5.8 7.5H2z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+              </svg>
+              <span>VOYAGER <em>LOGISTICS</em></span>
+            </span>
+            <span className="proofLogo">
+              <svg className="proofLogoIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M1.5 9.5c1.4-1.6 2.6-1.6 4 0s2.6 1.6 4 0 2.6-1.6 4 0" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                <path d="M1.5 12c1.4-1.6 2.6-1.6 4 0s2.6 1.6 4 0 2.6-1.6 4 0" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              </svg>
+              <span>BLUEWATER <em>LOGISTICS</em></span>
+            </span>
+            <span className="proofLogo">
+              <svg className="proofLogoIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 12.5h12L9 4.5l-2.2 3.2-1-1.4z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+              </svg>
+              <span>SUMMIT <em>FREIGHT</em></span>
+            </span>
+            <span className="proofLogo">
+              <svg className="proofLogoIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                <path d="M10 5.5L13.5 8 10 10.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span>NORTHLINE <em>LOGISTICS</em></span>
+            </span>
+            <span className="proofLogo">
+              <svg className="proofLogoIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 10.5L8 5.5l5 5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span>ELEVATE <em>LOGISTICS</em></span>
+            </span>
           </div>
         </div>
       </div>
