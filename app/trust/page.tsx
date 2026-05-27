@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Layout, PageHero, SectionHeader, Cards, FinalCTA } from "@/components/marketing";
 
+
+export const metadata: Metadata = {
+  title: "Security & Trust — Clyde",
+  description: "How Clyde handles freight data, documents, and email with isolation, encryption, and human oversight built in.",
+};
 const trustItems = [
   {
     title: "Verified context",

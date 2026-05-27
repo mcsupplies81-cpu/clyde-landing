@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Cards, FinalCTA, Layout, PageHero, SectionHeader } from '@/components/marketing';
 
+
+export const metadata: Metadata = {
+  title: "For Carriers — Clyde",
+  description: "Clyde helps carrier dispatch teams respond to load offers faster, submit PODs on time, and keep broker communication clean.",
+};
 export default function Page() {
   return (
     <Layout>

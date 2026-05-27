@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { Layout, PageHero, SectionHeader, Cards, FinalCTA } from "@/components/marketing";
 import Link from "next/link";
 
+
+export const metadata: Metadata = {
+  title: "Integrations — Clyde",
+  description: "Clyde connects to Gmail, Outlook, McLeod, Tai, Rose Rocket, Turvo, and any TMS that supports CSV exports.",
+};
 const integrations = [
   { title: "Gmail", copy: "Connect shared and individual Gmail inboxes." },
   {

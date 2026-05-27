@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Layout, PageHero, FinalCTA } from "@/components/marketing";
 
+
+export const metadata: Metadata = {
+  title: "Pricing — Clyde",
+  description: "Simple volume-based pricing for freight brokers, 3PLs, and freight ops teams. No per-seat games.",
+};
 const plans = [
   {
     name: "Starter",

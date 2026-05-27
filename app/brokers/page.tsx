@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { FinalCTA, Layout, PageHero, SectionHeader } from '@/components/marketing';
 
+
+export const metadata: Metadata = {
+  title: "For Brokers — Clyde",
+  description: "Clyde automates freight email triage, POD collection, and draft replies so brokers spend more time covering loads and less time in their inbox.",
+};
 export default function Page() {
   return (
     <Layout>

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Layout, PageHero, SectionHeader, Cards, FinalCTA } from "@/components/marketing";
 
+
+export const metadata: Metadata = {
+  title: "Product — Clyde",
+  description: "See how Clyde reads freight email, matches messages to loads, and prepares actions for your team — without replacing your TMS.",
+};
 const capabilities = [
   {
     title: "Inbox triage",
