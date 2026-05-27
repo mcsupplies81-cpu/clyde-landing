@@ -565,3 +565,14 @@ a { color: inherit; text-decoration: none; }
 @media (max-width:760px) {
   .beforeAfterGrid { grid-template-columns:1fr; }
 }
+
+.integrationCategory { margin-bottom:48px; }
+.integrationCategory:last-child { margin-bottom:0; }
+.integrationCatHead { font-size:.72rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--blue-500); margin:0 0 16px; }
+.integrationItems { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+.integrationItem { border:1px solid var(--line); border-radius:14px; padding:18px 20px; background:white; display:grid; gap:4px; }
+.integrationItemName { font-weight:700; font-size:.95rem; margin:0; }
+.integrationItemCopy { margin:0; font-size:.85rem; color:var(--ink-700); line-height:1.5; }
+.integrationCta { text-align:center; padding:48px 0 0; }
+.integrationCta h3 { font-size:1.3rem; font-weight:700; margin:0 0 10px; }
+.integrationCta p { color:var(--ink-700); margin:0 0 20px; }
