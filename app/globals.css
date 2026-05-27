@@ -527,4 +527,22 @@ a { color: inherit; text-decoration: none; }
 @media (max-width:760px) {
   .statsGrid { grid-template-columns:repeat(2,1fr); gap:24px; }
   .statItem { border-right:none; }
+
+.workflowRow { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+.workflowStep { padding:32px 28px; border-right:1px solid var(--line); display:grid; gap:10px; }
+.workflowStep:last-child { border-right:none; }
+.workflowNum { font-size:.72rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--blue-500); }
+.workflowTitle { font-size:1.05rem; font-weight:700; margin:0; }
+.workflowCopy { margin:0; font-size:.9rem; color:var(--ink-700); line-height:1.6; }
+.detailRows { display:grid; gap:0; }
+.detailRow { display:grid; grid-template-columns:48px 1fr; gap:0 20px; padding:28px 0; border-bottom:1px solid var(--line); align-items:start; }
+.detailRow:last-child { border-bottom:none; }
+.detailIcon { width:44px; height:44px; border-radius:12px; background:rgba(62,123,255,.1); display:flex; align-items:center; justify-content:center; }
+.detailTitle { font-size:1rem; font-weight:700; margin:0 0 6px; }
+.detailCopy { margin:0; font-size:.92rem; color:var(--ink-700); line-height:1.6; }
+
+@media (max-width:760px) {
+  .workflowRow { grid-template-columns:1fr; }
+  .workflowStep { border-right:none; border-bottom:1px solid var(--line); }
+  .workflowStep:last-child { border-bottom:none; }
 }
