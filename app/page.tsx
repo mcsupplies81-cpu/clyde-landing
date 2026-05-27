@@ -122,6 +122,72 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="section">
+        <div className="container stack-sm">
+          <SectionHeader title="Automate the freight work hiding in your inbox." />
+          <div className="grid3">
+            <Cards
+              items={[
+                {
+                  title: "Inbox triage",
+                  copy: "Classify every freight email by workflow, urgency, customer, carrier, and next action.",
+                },
+                {
+                  title: "Paperwork automation",
+                  copy: "Detect, extract, and file PODs, BOLs, rate confirmations, invoices, and lumper receipts.",
+                },
+                {
+                  title: "Load matching",
+                  copy: "Match messages and documents to loads using load numbers, PO numbers, lanes, and carrier references.",
+                },
+                {
+                  title: "Draft replies",
+                  copy: "Generate customer and carrier responses using verified freight context.",
+                },
+                {
+                  title: "Missing document chase",
+                  copy: "Automatically follow up on missing PODs, BOLs, and required paperwork.",
+                },
+                {
+                  title: "Load intake",
+                  copy: "Extract and prepare new load details from emails and attachments.",
+                },
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section light">
+        <div className="container">
+          <SectionHeader
+            title="AI that shows its work."
+            copy="Clyde gives freight teams confidence through visibility, review, and control."
+          />
+          <Cards
+            items={[
+              {
+                title: "Verified context",
+                copy: "Every action is grounded in real load data, document context, and sender history.",
+              },
+              {
+                title: "Human review",
+                copy: "Nothing is sent or filed without your team approving it first.",
+              },
+              {
+                title: "Confidence scoring",
+                copy: "Clyde shows match confidence so your team can catch and correct edge cases.",
+              },
+              {
+                title: "Audit trail",
+                copy: "Every classification, match, and action is logged and traceable.",
+              },
+            ]}
+          />
+        </div>
+      </section>
+
       <FinalCTA
         title="Give your team their inbox back."
         copy="See how Clyde turns freight email, paperwork, and load actions into a calmer operating system for brokers and 3PLs."
