@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Layout, PageHero, SectionHeader, Cards, FinalCTA } from "@/components/marketing";
 
@@ -66,6 +67,10 @@ function DotIcon() {
   );
 }
 
+export const metadata = {
+  title: "Security & Trust — Clyde",
+  description: "How Clyde handles freight data, documents, and email with isolation, encryption, and human oversight built in.",
+};
 export default function Page() {
   return (
     <Layout>

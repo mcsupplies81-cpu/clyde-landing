@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FinalCTA, Layout, PageHero, SectionHeader } from '@/components/marketing';
 
 const dispatchWorkflow = [
@@ -24,6 +25,10 @@ const carrierUseCases = [
   },
 ];
 
+export const metadata = {
+  title: "For Carriers — Clyde",
+  description: "Clyde helps carrier dispatch teams respond to load offers faster, submit PODs on time, and keep broker communication clean.",
+};
 export default function Page() {
   return (
     <Layout>
