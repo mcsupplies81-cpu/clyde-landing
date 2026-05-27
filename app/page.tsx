@@ -8,9 +8,9 @@ export default function Home() {
         <div className="container heroInner">
           <div className="stack">
             <h1 className="h1 noMargin">
-              Less inbox<span className="headlineDot" />
+              Less inbox.
               <br />
-              More freight<span className="headlineDot" />
+              More freight.
             </h1>
             <p className="lead noMargin max68">
               Clyde automates freight email, paperwork, and load actions so brokers and 3PLs can spend less time
