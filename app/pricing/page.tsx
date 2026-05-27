@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Layout, PageHero, FinalCTA } from "@/components/marketing";
 
 const plans = [
@@ -31,6 +34,38 @@ const plans = [
 ];
 
 export default function Page() {
+  const faqs = [
+    {
+      q: "How does pricing work?",
+      a: "Pricing is based on inbox volume and team size — not per seat. Most teams start with the Starter or Growth plan and scale as Clyde handles more of their workflow.",
+    },
+    {
+      q: "Is there a free trial?",
+      a: "We offer a guided pilot for qualifying teams. Book a demo and we'll walk you through what a pilot looks like for your specific workflow.",
+    },
+    {
+      q: "Which TMS platforms do you support?",
+      a: "Clyde works with McLeod, Tai, Rose Rocket, Turvo, and any TMS that supports CSV exports. We build new integrations on request.",
+    },
+    {
+      q: "How long does setup take?",
+      a: "Most teams are processing live email within one week. Onboarding includes inbox connection, load data import, and workflow configuration with your team.",
+    },
+    {
+      q: "Is my freight data secure?",
+      a: "Yes. Data is processed in isolated environments, encrypted in transit and at rest, and never used for model training. See our Trust page for details.",
+    },
+    {
+      q: "Can I cancel anytime?",
+      a: "Yes. Clyde is offered on monthly or annual terms with no long-term lock-in for most plans.",
+    },
+  ];
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex((current) => (current === index ? null : index));
+  };
+
   return (
     <Layout>
       <PageHero
@@ -69,6 +104,34 @@ export default function Page() {
           <div className="pricingPilot">
             <p>Pilot programs available for select broker and 3PL teams. <a href="/demo">Book a demo to learn more →</a></p>
           </div>
+          <section className="faqSection" aria-label="Pricing FAQs">
+            <h2 className="faqSectionHead">Frequently asked questions</h2>
+            <div className="faqList">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaqIndex === index;
+                return (
+                  <div className="faqItem" key={faq.q}>
+                    <button
+                      type="button"
+                      className="faqQuestion"
+                      onClick={() => toggleFaq(index)}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-answer-${index}`}
+                      id={`faq-question-${index}`}
+                    >
+                      <span>{faq.q}</span>
+                      <span className={isOpen ? "faqIcon open" : "faqIcon"}>+</span>
+                    </button>
+                    {isOpen && (
+                      <p className="faqAnswer" id={`faq-answer-${index}`} aria-labelledby={`faq-question-${index}`}>
+                        {faq.a}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         </div>
       </section>
       <FinalCTA title="Want a tailored quote?" copy="Book a demo and we will scope pricing to your freight volume and workflow needs." />
