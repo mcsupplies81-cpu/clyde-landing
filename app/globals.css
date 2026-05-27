@@ -598,3 +598,9 @@ a { color: inherit; text-decoration: none; }
 .loginInput:focus { outline:none; border-color:var(--blue-500); }
 .loginDivider { border:none; border-top:1px solid rgba(170,194,237,.15); margin:4px 0; }
 .loginFooter { font-size:.78rem; color:#4a6080; text-align:center; }
+
+.errorPage { min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:80px 0; }
+.errorCode { font-size:5rem; font-weight:800; letter-spacing:-.04em; color:var(--blue-500); opacity:.35; margin:0; line-height:1; }
+.errorTitle { font-size:2rem; font-weight:700; margin:16px 0 10px; }
+.errorCopy { color:var(--ink-700); margin:0 0 28px; }
+.errorActions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
