@@ -79,18 +79,24 @@ export default function Page() {
           </div>
           <div className="demoSidebar">
             <div className="demoSideCard">
-              <h3>What happens in the demo</h3>
+              <h3>Why teams book a demo</h3>
               <ul>
-                <li>See Clyde working on real freight email scenarios</li>
-                <li>Walkthrough tailored to your team type and workflow</li>
-                <li>Clear next steps and pricing overview</li>
+                <li>See your specific inbox automated — not a generic walkthrough</li>
+                <li>Understand how Clyde matches to your TMS data</li>
+                <li>Get a workflow plan built for your team in the call</li>
+                <li>Know exactly what onboarding looks like before you commit</li>
               </ul>
-              <hr className="demoDivider" />
-              <p className="demoNote">Typical walkthrough is 30 minutes. No slides. No pitch deck.</p>
             </div>
             <div className="demoSideCard">
-              <h3 style={{ fontSize: ".95rem", marginBottom: 12 }}>Who books demos</h3>
-              <p className="demoNote">Freight brokers, 3PL ops teams, and carrier dispatch leads who are tired of living in their inbox.</p>
+              <h3>What to expect</h3>
+              <ul>
+                <li>30-minute video call with a Clyde workflow specialist</li>
+                <li>Live walkthrough using freight email examples from your industry</li>
+                <li>No sales pressure — if it's not a fit, we'll tell you</li>
+              </ul>
+            </div>
+            <div className="demoSideCard darkCard">
+              <p className="demoNote">“We booked the demo expecting a pitch. We got a workflow audit. Signed within the week.” — Rachel K., Director of Operations</p>
             </div>
           </div>
         </div>
