@@ -138,6 +138,29 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="statsBar">
+        <div className="container">
+          <div className="statsGrid">
+            <div className="statItem">
+              <p className="statNumber">2 hrs</p>
+              <p className="statLabel">saved per broker per day</p>
+            </div>
+            <div className="statItem">
+              <p className="statNumber">94%</p>
+              <p className="statLabel">email triage accuracy</p>
+            </div>
+            <div className="statItem">
+              <p className="statNumber">&lt; 5 min</p>
+              <p className="statLabel">inbox setup time</p>
+            </div>
+            <div className="statItem">
+              <p className="statNumber">Any TMS</p>
+              <p className="statLabel">no rip-and-replace required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="section">
         <div className="container">
           <SectionHeader title="Freight work still starts in email." copy="Your team should not have to live there." />
