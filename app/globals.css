@@ -49,7 +49,6 @@ a { color: inherit; text-decoration: none; }
   height: 26px;
   width: auto;
   display: block;
-  mix-blend-mode: screen;
 }
 .navLinks { display: flex; gap: 18px; color: #dce8ff; font-size: .95rem; }
 .navCtas { display: flex; align-items: center; gap: 14px; }
@@ -248,20 +247,27 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   gap: 10px;
   width: 100%;
-  max-width: 400px;
+  max-width: 440px;
   margin-left: auto;
+  position: relative;
 }
 
+/* stagger each card for depth */
+.heroCard:nth-child(1) { transform: translateX(16px); }
+.heroCard:nth-child(2) { transform: translateX(0px); }
+.heroCard:nth-child(3) { transform: translateX(24px); }
+
 .heroCard {
-  background: rgba(4, 8, 20, 0.86);
-  border: 1px solid rgba(100, 140, 210, 0.16);
+  background: rgba(4, 10, 26, 0.88);
+  border: 1px solid rgba(120, 160, 230, 0.22);
   border-radius: 14px;
-  padding: 12px 14px;
-  backdrop-filter: blur(22px) saturate(130%);
-  -webkit-backdrop-filter: blur(22px) saturate(130%);
+  padding: 14px 16px;
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
   color: #d8eaff;
   display: grid;
-  gap: 7px;
+  gap: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 0 rgba(180,210,255,0.06) inset;
 }
 
 .heroCardHeader {
