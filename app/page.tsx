@@ -24,7 +24,7 @@ export default function Home() {
               <Link href="/demo" className="btn btnPrimary">
                 Book a demo &nbsp;→
               </Link>
-              <Link href="/product" className="btn btnSecondary heroPlayBtn">
+              <Link href="/product" className="heroPlayBtn">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
                   <circle cx="9" cy="9" r="8" stroke="currentColor" strokeWidth="1.4" />
                   <path d="M7.5 6.5l4 2.5-4 2.5V6.5z" fill="currentColor" />
