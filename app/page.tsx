@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Cards, CinematicHero, FinalCTA, Layout, SectionHeader } from "@/components/marketing";
+import { ScrollFade } from "@/app/components/ScrollFade";
 
 export default function Home() {
   return (
@@ -98,7 +99,8 @@ export default function Home() {
         </div>
       </CinematicHero>
 
-      <div className="proofBar">
+      <ScrollFade>
+        <div className="proofBar">
         <div className="container">
           <p className="proofLabel">Trusted by freight teams of all sizes</p>
           <div className="proofLogos">
@@ -137,8 +139,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </ScrollFade>
 
-      <div className="statsBar">
+      <ScrollFade>
+        <div className="statsBar">
         <div className="container">
           <div className="statsGrid">
             <div className="statItem">
@@ -160,7 +164,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </ScrollFade>
 
+      <ScrollFade>
       <section className="section">
         <div className="container">
           <SectionHeader title="Freight work still starts in email." copy="Your team should not have to live there." />
@@ -182,7 +188,9 @@ export default function Home() {
           />
         </div>
       </section>
+      </ScrollFade>
 
+      <ScrollFade>
       <section className="section light">
         <div className="container">
           <SectionHeader title="From freight email to completed load action." />
@@ -202,7 +210,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
+      <ScrollFade>
       <section className="section">
         <div className="container">
           <SectionHeader title="Built for the teams moving freight." />
@@ -230,7 +240,9 @@ export default function Home() {
           />
         </div>
       </section>
+      </ScrollFade>
 
+      <ScrollFade>
       <section className="section light">
         <div className="container stack-sm">
           <SectionHeader
@@ -247,8 +259,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
 
+      <ScrollFade>
       <section className="section">
         <div className="container stack-sm">
           <SectionHeader title="Automate the freight work hiding in your inbox." />
@@ -284,7 +298,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
+      <ScrollFade>
       <section className="section light">
         <div className="container">
           <SectionHeader
@@ -313,9 +329,11 @@ export default function Home() {
           />
         </div>
       </section>
+      </ScrollFade>
 
 
 
+      <ScrollFade>
       <section className="section">
         <div className="container">
           <SectionHeader title="Freight teams that gave their inbox back." />
@@ -358,6 +376,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
       <FinalCTA
         title="Give your team their inbox back."
