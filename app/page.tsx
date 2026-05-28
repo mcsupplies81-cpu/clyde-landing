@@ -7,7 +7,7 @@ export default function Home() {
     <Layout>
       <CinematicHero>
         <div className="container heroInner">
-          <div className="stack">
+          <div className="stack heroTextCol">
             <h1 className="h1 noMargin">
               Less inbox.
               <br />

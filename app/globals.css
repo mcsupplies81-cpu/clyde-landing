@@ -109,11 +109,12 @@ a { color: inherit; text-decoration: none; }
 .heroInner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 24px;
   padding: 110px 0 90px;
   align-items: start;
 }
+.heroTextCol { max-width: 520px; }
 .pageHeroInner { padding-bottom: 78px; }
 
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
@@ -253,9 +254,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* stagger each card for depth — matches mockup cascade */
-.heroCard:nth-child(1) { transform: translateX(28px); }
-.heroCard:nth-child(2) { transform: translateX(-8px); }
-.heroCard:nth-child(3) { transform: translateX(44px); }
+.heroCard:nth-child(1) { transform: translateX(48px); }
+.heroCard:nth-child(2) { transform: translateX(8px); }
+.heroCard:nth-child(3) { transform: translateX(64px); }
 
 .heroCard {
   background: rgba(4, 10, 26, 0.88);
