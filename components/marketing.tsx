@@ -10,6 +10,7 @@ const nav = [
   ["Carriers", "/carriers"],
   ["Integrations", "/integrations"],
   ["Pricing", "/pricing"],
+  ["Blog", "/blog"],
 ] as const;
 
 export function MarketingHeader() {
