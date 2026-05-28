@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 const nav = [
   ["Product", "/product"],
@@ -92,6 +92,50 @@ export function MarketingFooter() {
   );
 }
 
+
+export function StickyDemoCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 500);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (isDismissed) {
+    return null;
+  }
+
+  return (
+    <div className={`stickyDemo ${isVisible ? "visible" : ""}`.trim()}>
+      <div className="container stickyDemoInner">
+        <p className="stickyDemoText">Ready to see Clyde in action?</p>
+        <div className="stickyDemoActions">
+          <Link href="/demo" className="btn btnPrimary">
+            Book a demo →
+          </Link>
+          <button
+            type="button"
+            className="stickyDemoClose"
+            aria-label="Dismiss demo call to action"
+            onClick={() => setIsDismissed(true)}
+          >
+            ×
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function CinematicHero({ children }: { children: ReactNode }) {
   return <section className="hero">{children}</section>;
 }
@@ -170,6 +214,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <MarketingHeader />
       {children}
       <MarketingFooter />
+      <StickyDemoCTA />
     </>
   );
 }
