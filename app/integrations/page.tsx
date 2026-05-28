@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FinalCTA, Layout, PageHero } from "@/components/marketing";
 import Link from "next/link";
 
@@ -65,6 +66,10 @@ const integrationCategories: IntegrationCategory[] = [
   },
 ];
 
+export const metadata = {
+  title: "Integrations — Clyde",
+  description: "Clyde connects to Gmail, Outlook, McLeod, Tai, Rose Rocket, Turvo, and any TMS that supports CSV exports.",
+};
 export default function Page() {
   return (
     <Layout>
